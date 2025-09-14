@@ -7,7 +7,7 @@ const Mianpage = () => {
         url:'',
         summary:''
     })
-    cosnt [allArticles,setAllArticles]=useState([])
+    const [allArticles,setAllArticles]=useState([])
     return (
         <div>
 
