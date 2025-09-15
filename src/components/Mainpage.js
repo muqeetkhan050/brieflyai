@@ -1,29 +1,22 @@
-import React, { useState } from 'react';
-import Header from './Header'
+import { useState, useEffect } from 'react';
+import { useLazyGetSummaryQuery } from '../services/article';
 
-const Mianpage = () => {
-    const [articles, setArticles]=useState({
 
-        url:'',
-        summary:''
-    })
+const MainPage = () => {
+    const [articles, setArticles] = useState({
+        url: '',
+        summary: ''
+    });
     const [allArticles,setAllArticles]=useState([])
-    return (
+    const[coppied,setCopied]=useState("");
+    const [copyArticle,setCopyArticle]=useState('');
+    const [getSummary,{error,isFetched}]=useLazyGetSummaryQuery
+        return (
         <div>
-
-            <div>
-                <form>
-                <input
-                value={articles.url}
-                onChange={(e)=>setArticles({...articles,url:e.target.value})}
-                    type="url" placeholder='Pastes link here' />
-
-
-                <button type='submit'>Summerize</button>
-                </form>
-            </div>
+            this is main page
         </div>
     )
 }
 
-export default Mianpage;
+
+export default MainPage;
