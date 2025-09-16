@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useLazyGetSummaryQuery } from '../services/article';
 
+import tick from '../assets/tick.png'
+import copy from '../assets/copy.png'
+
 
 const MainPage = () => {
     const [articles, setArticles] = useState({
