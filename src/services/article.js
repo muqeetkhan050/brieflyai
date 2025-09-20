@@ -25,7 +25,7 @@ export const articleApi = createApi({
 
     getSummary: builder.query({
       query: (params) =>
-        `/summarizeit?url=${encodeURIComponent(params.articleUrl)}&length=4`,
+        `/summarize?url=${encodeURIComponent(params.articleUrl)}&length=4`,
     }),
   }),
 });
